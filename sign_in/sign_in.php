@@ -28,9 +28,10 @@ if($user&&password_verify($pwd,$user['pwd'])){
   $user=getUsers($pdo,$email);
   $_SESSION['name']=$user['name'];
   $_SESSION['user_id']=$user['id'];
-  $_SESSION['email']=$user['email'];
+  $_SESSION['email']=$user['emeil'];
   $_SESSION['name']=$user['name'];
-  
+  $_SESSION['last_login'] = time();
+
   header('Location: ../index.php');
 }
 

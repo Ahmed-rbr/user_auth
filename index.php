@@ -28,7 +28,7 @@ $name = $_SESSION['name'] ?? 'Guest';
         <?php if (isset($_SESSION['email'])): ?>
             <p>Logged in as: <?= htmlspecialchars($_SESSION['email'], ENT_QUOTES, 'UTF-8') ?></p>
         <?php endif; ?>
-        
+
         <a href="sign_in/logout.php" class="logout-btn">Logout</a>
     </div>
 </body>
